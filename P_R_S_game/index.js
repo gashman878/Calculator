@@ -10,7 +10,6 @@ function rock() {
     }
 }
 
-
 function paper() {
     const random = Math.random();
     if (random <= 1/3){
@@ -31,4 +30,25 @@ function scissors() {
     }else{
         document.getElementById('please').innerHTML = "I choose Scissors, Thats a draw";
     }
+}
+
+
+
+// FOR THE CART
+let cartItem = 0;
+function addCart() {
+    cartItem++;
+    document.getElementById('cartItem').innerHTML = "You have " + cartItem + " item(s) in your cart";
+}
+function plus2() {
+    cartItem += 2;
+    document.getElementById('cartItem').innerHTML = "You have " + cartItem + " item(s) in your cart";
+}
+function plus3() {
+    cartItem += 3;
+    document.getElementById('cartItem').innerHTML = "You have " + cartItem + " item(s) in your cart";
+}
+function resetCart() {
+    cartItem = 0;
+    document.getElementById('cartItem').innerHTML = "Your cart has been reset to " + cartItem + " items";
 }
