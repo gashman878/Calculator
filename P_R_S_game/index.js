@@ -1,36 +1,79 @@
-
-function rock() {
+function pickComputerMove() {
     const random = Math.random();
     if (random <= 1/3){
-        document.getElementById('please').innerHTML = "I choose Rock, Thats a draw";
+        computerMove = "Rock";
     }else if(random > 1/3 && random < 2/3){
-        document.getElementById('please').innerHTML = "I choose Paper, You Lost";
+        computerMove = "Paper";
     }else{
-        document.getElementById('please').innerHTML = "I choose Scissors, You won";
+        computerMove = "Scissors";
+    }
+    return computerMove;
+}
+
+function playGame(playerMove) {
+    const computerMove = pickComputerMove();
+    let result = '';
+    if (playerMove === "Rock") {
+        if (computerMove === "Rock") {
+            result = "Tie";
+        } else if(computerMove === "Paper"){
+            result = "You Lose";
+        } else if(computerMove === "Scissors"){
+            result = "You Win";
+        }
+
+    } else if(playerMove === "Paper") {
+        if (computerMove === "Rock") {
+            result = "You Win";
+        } else if(computerMove === "Paper"){
+            result = "Tie";
+        } else if(computerMove === "Scissors"){
+            result = "You Lose";
+        }
+
+    } else if(playerMove === "Scissors"){
+        if (computerMove === "Rock") {
+            result = "You Lose";
+        } else if(computerMove === "Paper"){
+            result = "You Win";
+        } else if(computerMove === "Scissors"){
+            result = "Tie";
+        }
     }
 }
 
-function paper() {
-    const random = Math.random();
-    if (random <= 1/3){
-        document.getElementById('please').innerHTML = "I choose Rock, You won";
-    }else if(random > 1/3 && random < 2/3){
-        document.getElementById('please').innerHTML = "I choose Paper, Thats a draw";
-    }else{
-        document.getElementById('please').innerHTML = "I choose Scissors, You lost";
-    }
-}
 
-function scissors() {
-    const random = Math.random();
-    if (random <= 1/3){
-        document.getElementById('please').innerHTML = "I choose Rock, You Lost";
-    }else if(random > 1/3 && random < 2/3){
-        document.getElementById('please').innerHTML = "I choose Paper, You Won";
-    }else{
-        document.getElementById('please').innerHTML = "I choose Scissors, Thats a draw";
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
