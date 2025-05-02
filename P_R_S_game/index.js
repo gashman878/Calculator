@@ -1,3 +1,9 @@
+const score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+};
+
 function pickComputerMove() {
     const random = Math.random();
     if (random <= 1/3){
@@ -40,6 +46,29 @@ function playGame(playerMove) {
             result = "Tie";
         }
     }
+    document.getElementById('please').style.display = "block";
+    document.getElementById('please').innerHTML = "Computer Picks " + computerMove + ", " + result;
+
+    if (result === "You Win") {
+        score.wins ++;
+        document.getElementById('won').innerHTML = score.wins;
+    } else if(result === "You Lose"){
+        score.losses ++;
+        document.getElementById('lost').innerHTML = score.losses;
+    } else if(result === "Tie"){
+        score.ties ++;
+        document.getElementById('tie').innerHTML = score.ties;
+    }
+    
+}
+function reset() {
+    score.losses = 0;
+    score.ties = 0;
+    score.wins = 0;
+    document.getElementById('won').innerHTML = score.wins;
+    document.getElementById('lost').innerHTML = score.losses;
+    document.getElementById('tie').innerHTML = score.ties;
+    document.getElementById('please').style.display = "none";
 }
 
 
