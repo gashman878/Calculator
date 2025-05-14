@@ -5,7 +5,7 @@
   }
 .calculator{
     height: 90vh;
-    width: 30vw;
+    width: 28vw;
     border: 2px solid black;
     margin: auto;
     padding: 10px;
@@ -14,14 +14,42 @@
     background-color: black;
     margin-bottom: 10px;
     height: 20%;
+    align-content: center;
 }
 .screen_detail{
     color: white;
     font-size: 60px;
     text-align: right;
-    
 }
 .keys{
     background-color: black;
     height: 78%;
+    padding: 15px 15px 0px 15px;
+}
+.key_holders{
+    display: flex;
+    margin-bottom: 10px;
+}
+.key_numbers{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.orange{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+}
+.zero{
+    width: 190px;
+    border-radius: 50px;
 }
