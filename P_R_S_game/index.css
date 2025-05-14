@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.calculator{
+    height: 90vh;
+    width: 30vw;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px;
+}
+.screen{
+    background-color: black;
+    margin-bottom: 10px;
+    height: 20%;
+}
+.screen_detail{
+    color: white;
+    font-size: 60px;
+    text-align: right;
+    
+}
+.keys{
+    background-color: black;
+    height: 78%;
+}
