@@ -10,37 +10,38 @@
 <body>
     <div class="calculator">
         <div class="screen">
-            <p class="screen_detail">0</p>
-        </div>
+            <input type="text" id="screen_detail" placeholder="0" readonly>
+            <!-- <p id="screen_detail">iihri</p> -->
+        </div> 
         <div class="keys">
             <div class="key_holders">
                 <button class="key_numbers off" onclick="off()">Off</button>
-                <button class="key_numbers" onclick="ccc()">C</button>
+                <button class="key_numbers" onclick="clearPlease()">C</button>
                 <button class="key_numbers" onclick="pcnt()">%</button>
-                <button class="orange">/</button>
+                <button class="orange" onclick="solve('/')">/</button>
             </div>
             <div class="key_holders">
                 <button class="key_numbers" onclick="solve('7')">7</button>
                 <button class="key_numbers" onclick="solve('8')">8</button>
                 <button class="key_numbers" onclick="solve('9')">9</button>
-                <button class="orange">x</button>
+                <button class="orange" onclick="solve('*')">x</button>
             </div>
             <div class="key_holders">
-                <button class="key_numbers" onclick="solve('4)">4</button>
-                <button class="key_numbers" onclick="solve(5)">5</button>
-                <button class="key_numbers" onclick="solve(6)">6</button>
-                <button class="orange">-</button>
+                <button class="key_numbers" onclick="solve('4')">4</button>
+                <button class="key_numbers" onclick="solve('5')">5</button>
+                <button class="key_numbers" onclick="solve('6')">6</button>
+                <button class="orange" onclick="solve('-')">-</button>
             </div>
             <div class="key_holders">
-                <button class="key_numbers" onclick="solve(1)">1</button>
-                <button class="key_numbers" onclick="solve(2)">2</button>
-                <button class="key_numbers" onclick="solve(3)">3</button>
-                <button class="orange" onclick="plus()">+</button>
+                <button class="key_numbers" onclick="solve('1')">1</button>
+                <button class="key_numbers" onclick="solve('2')">2</button>
+                <button class="key_numbers" onclick="solve('3')">3</button>
+                <button class="orange" onclick="solve('+')">+</button>
             </div>
             <div class="key_holders">
                 <button class="key_numbers zero" onclick="solve(0)">0</button>
                 <button class="key_numbers" onclick="solve('.')">.</button>
-                <button class="orange">=</button>
+                <button class="orange" onclick="calculate()">=</button>
             </div>
         </div>
     
