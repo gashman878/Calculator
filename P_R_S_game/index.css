@@ -53,3 +53,7 @@
     width: 190px;
     border-radius: 50px;
 }
+.off{
+    background-color: red;
+    color: white;
+}
